@@ -94,7 +94,7 @@ DELETE FROM exile_tanoa.infistar_logs WHERE exile_tanoa.infistar_logs.time < DAT
 DELETE FROM exile_tanoa.trader_log WHERE exile_tanoa.trader_log.time_sold < DATE_SUB(NOW(), INTERVAL 10 DAY);
 DELETE FROM exile_tanoa.trader_recycle_log WHERE exile_tanoa.trader_recycle_log.time_sold < DATE_SUB(NOW(), INTERVAL 10 DAY);
 ```````````
-![](https://prnt.sc/yzle00)
+![](https://i.imgur.com/sFAHONE.jpg)
 ![](http://i.imgur.com/AaZNH2C.png)
 ![](http://i.imgur.com/LYPa4lq.png)
 ![](http://i.imgur.com/wkei5I5.png)
