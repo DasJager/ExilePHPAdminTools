@@ -29,6 +29,24 @@
         }
     }
 
+    function PlayerKills(){
+        $connect=connectdb();
+        try {
+            $sql="
+			SELECT
+            killer_name,killer_uid,victim_name,victim_uid,weapon,distance,died_at
+			FROM 
+			kills 
+			WHERE kills.died_at >= DATE_ADD(CURDATE(), INTERVAL '-14' DAY);";
+            $stmt=$connect->prepare($sql);
+            $stmt->execute();
+            $accounts = $stmt->fetchAll();
+            return $accounts;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     function TotalAccounts(){
         $connect=connectdb();
         try {
