@@ -46,6 +46,27 @@
             echo $e->getMessage();
         }
     }
+    function VehicleList(){
+        $connect=connectdb();
+        try {
+            $sql="
+			SELECT
+            class,account_uid,is_locked,spawned_at,last_updated_at,pin_code,territory_id,vg_public,deleted_at
+			FROM 
+			vehicle 
+			WHERE 
+			vehicle.deleted_at >= DATE_ADD(CURDATE(), INTERVAL '-14' DAY);
+			vehicle.spawned_at >= DATE_ADD(CURDATE(), INTERVAL '-14' DAY);
+			vehicle.last_updated_at >= DATE_ADD(CURDATE(), INTERVAL '-14' DAY);
+			";
+            $stmt=$connect->prepare($sql);
+            $stmt->execute();
+            $accounts = $stmt->fetchAll();
+            return $accounts;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
 
     function TotalAccounts(){
         $connect=connectdb();

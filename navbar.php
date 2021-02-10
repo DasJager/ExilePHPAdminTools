@@ -28,7 +28,8 @@ header("Location: " . $_SERVER["PHP_SELF"]);
                         <li><a href="accounts.php">ACCOUNTS</a></li>
                         <li><a href="clans.php">CLANS</a></li>
                         <li><a href="poptabs.php">POPTABS</a></li>
-						<li><a href="kills.php">Player Kills</a></li>                        
+						<li><a href="kills.php">Player Kills</a></li>
+						<li><a href="vehicles.php">Vehicle List</a></li>                        
                         <div class="divider"></div>
                         <li><a href="territories.php">TERRITORY LIST</a></li>
                         <li><a href="deletedbases.php">TERRITORIES DELETED</a></li>
