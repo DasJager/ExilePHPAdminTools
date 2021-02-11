@@ -311,20 +311,6 @@
             JOIN account a ON trader_log.playerid = a.uid
             WHERE time_sold > NOW() - INTERVAL 7 DAY
             AND playerid <> ''
-            AND (
-            item_sold =    'Exile_Item_Codelock' 
-            OR item_sold = 'Exile_Item_Defibrillator' 
-            OR item_sold = 'Exile_Item_SafeKit' 
-            OR item_sold = 'Exile_Item_Grinder'
-            OR item_sold = 'Exile_Item_MetalPole'
-            OR item_sold = 'Exile_Item_SleepingMat'
-            OR item_sold = 'Exile_Item_OilCanister'
-            OR item_sold = 'Exile_Item_Foolbox'
-            OR item_sold = 'Exile_Item_Screwdriver'
-            OR item_sold like '%_Remote_Mag'
-            OR item_sold like '%_Wire_Mag'
-            OR item_sold like '%_Range_Mag'
-            )
             GROUP BY playerid,item_sold
             ORDER BY COUNT(*) DESC
             ";
