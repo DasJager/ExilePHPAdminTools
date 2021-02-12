@@ -133,6 +133,22 @@ $TerritoryInfobyID = TerritoryInfobyID($pid);
                 <th scope="row">Total Container Money </p></th>
                 <td><?php echo number_format($TerritoryInfobyID[0]['container_money']);?></td>
               </tr>
+			  <tr>
+			    <th scope="row">Flag Stolen </p></th>
+                <td><?php echo number_format($TerritoryInfobyID[0]['flag_stolen']+$TerritoryInfobyID[0]['flag_stolen']);?></td>
+			  </tr>
+			  <tr>
+			    <th scope="row">Flag Stolen By </p></th>
+                <td><?php echo $TerritoryPlayerInfo[0]['flag_stolen_by_uid'];?></td>
+			  </tr>
+			  <tr>
+                <th scope="row">Flag Stolen At </p></th>
+                <td><?php echo $TerritoryPlayerInfo[0]['flag_stolen_at'];?></td>
+              </tr>
+			  <tr>
+                <th scope="row">Deleted At </p></th>
+                <td><?php echo $TerritoryPlayerInfo[0]['deleted_at'];?></td>
+              </tr>
             </tbody>
           </table>
         </div>
