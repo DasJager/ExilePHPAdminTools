@@ -118,7 +118,7 @@ $TerritoryInfobyID = TerritoryInfobyID($pid);
                 <td><?php echo $TerritoryPlayerInfo[0]['level'];?></td>
               </tr>
               <tr>
-                <th scope="row">First Connection </p></th>
+                <th scope="row">Radius </p></th>
                 <td><?php echo $TerritoryPlayerInfo[0]['radius'];?></td>
               </tr>
               <tr>
