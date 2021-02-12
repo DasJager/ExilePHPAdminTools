@@ -28,7 +28,6 @@
             echo $e->getMessage();
         }
     }
-
     function PlayerKills(){
         $connect=connectdb();
         try {
@@ -46,7 +45,7 @@
             echo $e->getMessage();
         }
     }
-    function VehicleList(){
+	    function VehicleList(){
         $connect=connectdb();
         try {
             $sql="
@@ -67,7 +66,6 @@
             echo $e->getMessage();
         }
     }
-
     function TotalAccounts(){
         $connect=connectdb();
         try {
@@ -199,8 +197,8 @@
         $connect=connectdb();
         try {
             $sql="
-            SELECT id, owner_uid, name, radius, level,  DATE_FORMAT(DATE_ADD(last_paid_at,INTERVAL 8 DAY),'%b %d, %Y - %h:%i %p') as ProtectionDue from territory where owner_uid = :id
-            ";
+            SELECT id, owner_uid, name, radius, level, flag_stolen_by_uid, flag_stolen_at, build_rights, moderators,  DATE_FORMAT(DATE_ADD(last_paid_at,INTERVAL 8 DAY),'%b %d, %Y - %h:%i %p') as ProtectionDue from territory where owner_uid = :id
+			";
             $stmt=$connect->prepare($sql);
             $stmt->bindValue(":id",$id);
             $stmt->execute();
